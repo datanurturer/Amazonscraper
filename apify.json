@@ -1,0 +1,25 @@
+{
+  "version": "1.0",
+  "name": "amazon-product-scraper",
+  "description": "Scrapes Amazon product title, price, rating, and URL using Crawlee + Playwright.",
+  "main": "main.py",
+  "input": {
+    "title": "Amazon Product URLs",
+    "description": "List of Amazon product page URLs to scrape",
+    "type": "object",
+    "schema": {
+      "type": "object",
+      "properties": {
+        "urls": {
+          "type": "array",
+          "description": "Array of Amazon product URLs",
+          "items": {
+            "type": "string",
+            "format": "uri"
+          }
+        }
+      },
+      "required": ["urls"]
+    }
+  }
+}
